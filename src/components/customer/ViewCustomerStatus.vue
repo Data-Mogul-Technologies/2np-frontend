@@ -42,7 +42,7 @@ export default {
     async getCustomerStatusById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/StatusTypes/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/StatusTypes/${this.$route.params.id}`
         );
         this.CustomerStatusName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateCustomerStatus() {
       try {
         await axios.put(
-          `http://localhost:5000/StatusTypes/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/StatusTypes/${this.$route.params.id}`,
           {
             name: this.CustomerStatusName,
             

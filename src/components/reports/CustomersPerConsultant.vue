@@ -99,7 +99,7 @@ export default {
             this.currentIndex = index;
             console.log(consultant.sport_consultant_id)
                     try {
-        const response = await axios.get(`http://localhost:5000/ConsultantCust/${this.currentConsultant.sport_consultant_id}`);
+        const response = await axios.get(`https://api-2np.herokuapp.com/ConsultantCust/${this.currentConsultant.sport_consultant_id}`);
         this.report = response.data;
         console.log(response.data)
         } catch (err) {
@@ -109,7 +109,7 @@ export default {
     // Get All Consultants
     async getConsultants() {
       try {
-        const response = await axios.get("http://localhost:5000/Consultants");
+        const response = await axios.get("https://api-2np.herokuapp.com/Consultants");
         this.consultants = response.data;
         console.log(response.data)
       } catch (err) {
@@ -120,7 +120,7 @@ export default {
     // // Get all consultant customers 
     // async getReport() {
     //     try {
-    //     const response = await axios.get(`http://localhost:5000/ConsultantCust/${this.currentConsultant.sport_consultant_id}`);
+    //     const response = await axios.get(`https://api-2np.herokuapp.com/ConsultantCust/${this.currentConsultant.sport_consultant_id}`);
     //     this.report = response.data;
     //     console.log(response.data)
     //     } catch (err) {

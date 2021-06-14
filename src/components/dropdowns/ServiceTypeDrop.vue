@@ -32,7 +32,7 @@ export default {
 
   },
   mounted(){
-      axios.get('http://localhost:5000/ServiceType').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/ServiceType').then(response =>{
           this.ServiceType = response.data;
           console.log(response.data);
       }).catch(e =>{

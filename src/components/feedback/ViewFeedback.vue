@@ -119,7 +119,7 @@ export default {
     async getFeedbackById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Feedback/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Feedback/${this.$route.params.id}`
         );
         this.customers = response.data
         this.CustomerFName = response.data.first_name,
@@ -143,7 +143,7 @@ export default {
     async updateFeedback() {
       try {
         await axios.put(
-          `http://localhost:5000/Feedback/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/Feedback/${this.$route.params.id}`,
           {
             date: this.FeedbackDate,
             how_hear: this.FeedbackHear,

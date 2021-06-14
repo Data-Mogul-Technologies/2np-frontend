@@ -56,7 +56,7 @@ export default {
     // Get All CustomerStatus
     async getCustomerStatus() {
       try {
-        const response = await axios.get("http://localhost:5000/StatusTypes");
+        const response = await axios.get("https://api-2np.herokuapp.com/StatusTypes");
         this.customerStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete CustomerStatus
     async deleteCustomerStatus(id) {
       try {
-        await axios.delete(`http://localhost:5000/StatusTypes/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/StatusTypes/${id}`);
         this.getCustomerStatus();
       } catch (err) {
         console.log(err);

@@ -41,7 +41,7 @@ export default {
     // Create New ConsultantStatus
     async saveConsultantStatus() {
       try { 
-        await axios.post("http://localhost:5000/ConsultantStatus", {
+        await axios.post("https://api-2np.herokuapp.com/ConsultantStatus", {
             name: this.ConsultantStatusName
         });
         this.ConsultantStatusName = "";

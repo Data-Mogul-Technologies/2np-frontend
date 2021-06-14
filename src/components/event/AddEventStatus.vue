@@ -41,7 +41,7 @@ export default {
     // Create New EventStatus
     async saveEventStatus() {
       try { 
-        await axios.post("http://localhost:5000/EventStatus", {
+        await axios.post("https://api-2np.herokuapp.com/EventStatus", {
             name: this.EventStatusName
         });
         this.EventStatusName = "";

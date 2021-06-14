@@ -29,7 +29,7 @@ export default {
     }
     },
   mounted(){
-      axios.get('http://localhost:5000/CustomerTypes').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/CustomerTypes').then(response =>{
           this.CustomerTypes = response.data;
       }).catch(e =>{
 

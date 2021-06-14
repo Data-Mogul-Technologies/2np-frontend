@@ -58,7 +58,7 @@ export default {
     async getDmdProfileById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/DmdProfile/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/DmdProfile/${this.$route.params.id}`
         );
         this.DmdDominant = response.data.dom_driver;
         this.DmdSecondary = response.data.sec_driver;
@@ -73,7 +73,7 @@ export default {
     async updateDmdProfile() {
       try {
         await axios.put(
-          `http://localhost:5000/DmdProfile/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/DmdProfile/${this.$route.params.id}`,
           {
             dom_driver: this.DmdDominant,
             sec_driver: this.DmdSecondary,

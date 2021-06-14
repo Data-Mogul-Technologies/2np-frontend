@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('http://localhost:5000/ProfileStatus').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/ProfileStatus').then(response =>{
           this.ProfileStatus = response.data;
           console.log(response.data);
       }).catch(e =>{

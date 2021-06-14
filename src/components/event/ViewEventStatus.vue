@@ -42,7 +42,7 @@ export default {
     async getEventStatusById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/EventStatus/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/EventStatus/${this.$route.params.id}`
         );
         this.EventStatusName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateEventStatus() {
       try {
         await axios.put(
-          `http://localhost:5000/EventStatus/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/EventStatus/${this.$route.params.id}`,
           {
             name: this.EventStatusName,
             

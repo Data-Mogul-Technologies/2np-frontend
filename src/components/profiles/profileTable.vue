@@ -175,7 +175,7 @@ export default {
         async updateProfileStatus() {
             try {
                 await axios.put(
-                    `http://localhost:5000/ProfileStatus4Customer/${this.currentProfile.at_customer_report_id}`,
+                    `https://api-2np.herokuapp.com/ProfileStatus4Customer/${this.currentProfile.at_customer_report_id}`,
                     {
                     status_at_dmd_id: this.selectedProfileStatus
                     }

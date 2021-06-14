@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('http://localhost:5000/Consultants').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/Consultants').then(response =>{
           this.ConsultantNames = response.data;
           console.log(response.data);
       }).catch(e =>{

@@ -238,7 +238,7 @@ export default {
     async getCustomerById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Customers/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Customers/${this.$route.params.id}`
         );
         this.customers = response.data;
         this.CustomerFName = response.data.first_name;
@@ -266,7 +266,7 @@ export default {
     async updateCustomer() {
       try {
         await axios.put(
-          `http://localhost:5000/Customers/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/Customers/${this.$route.params.id}`,
           {
             first_name: this.CustomerFName,
             last_name: this.CustomerLName,

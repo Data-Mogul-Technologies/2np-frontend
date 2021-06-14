@@ -56,7 +56,7 @@ export default {
     // Get All PaymentSource
     async getPaymentSource() {
       try {
-        const response = await axios.get("http://localhost:5000/PaymentSource");
+        const response = await axios.get("https://api-2np.herokuapp.com/PaymentSource");
         this.PaymentSource = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete PaymentSource
     async deletePaymentSource(id) {
       try {
-        await axios.delete(`http://localhost:5000/PaymentSource/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/PaymentSource/${id}`);
         this.getPaymentSource();
       } catch (err) {
         console.log(err);

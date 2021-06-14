@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('http://localhost:5000/Sports').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/Sports').then(response =>{
           this.SportTypes = response.data;
           console.log(response.data);
       }).catch(e =>{

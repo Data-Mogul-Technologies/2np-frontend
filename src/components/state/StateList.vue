@@ -57,7 +57,7 @@ export default {
     // Get All state
     async getState() {
       try {
-        const response = await axios.get("http://localhost:5000/State");
+        const response = await axios.get("https://api-2np.herokuapp.com/State");
         this.states = response.data;
       } catch (err) {
         console.log(err);
@@ -67,7 +67,7 @@ export default {
     // Delete state
     async deletestate(id) {
       try {
-        await axios.delete(`http://localhost:5000/State/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/State/${id}`);
         this.getState();
       } catch (err) {
         console.log(err);

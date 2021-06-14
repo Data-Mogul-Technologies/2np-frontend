@@ -41,7 +41,7 @@ export default {
     // Create New CustomerStatus
     async saveCustomerStatus() {
       try { 
-        await axios.post("http://localhost:5000/StatusTypes", {
+        await axios.post("https://api-2np.herokuapp.com/StatusTypes", {
             name: this.CustomerStatusName
         });
         this.CustomerStatusName = "";

@@ -42,7 +42,7 @@ export default {
     async getEventTypeById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/EventType/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/EventType/${this.$route.params.id}`
         );
         this.EventTypeName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateEventType() {
       try {
         await axios.put(
-          `http://localhost:5000/EventType/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/EventType/${this.$route.params.id}`,
           {
             name: this.EventTypeName,
             
