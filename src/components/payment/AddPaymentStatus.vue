@@ -41,7 +41,7 @@ export default {
     // Create New PaymentStatus
     async savePaymentStatus() {
       try { 
-        await axios.post("http://localhost:5000/PaymentStatus", {
+        await axios.post("https://api-2np.herokuapp.com/PaymentStatus", {
             name: this.PaymentStatusName
         });
         this.PaymentStatusName = "";

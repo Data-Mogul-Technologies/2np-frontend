@@ -56,7 +56,7 @@ export default {
     // Get All PaymentStatus
     async getPaymentStatus() {
       try {
-        const response = await axios.get("http://localhost:5000/PaymentStatus");
+        const response = await axios.get("https://api-2np.herokuapp.com/PaymentStatus");
         this.paymentStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete PaymentStatus
     async deletePaymentStatus(id) {
       try {
-        await axios.delete(`http://localhost:5000/PaymentStatus/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/PaymentStatus/${id}`);
         this.getPaymentStatus();
       } catch (err) {
         console.log(err);

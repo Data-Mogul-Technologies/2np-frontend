@@ -41,7 +41,7 @@ export default {
     // Create New State
     async saveState() {
       try { 
-        await axios.post("http://localhost:5000/State", {
+        await axios.post("https://api-2np.herokuapp.com/State", {
             name: this.StateName
         });
         this.StateName = "";

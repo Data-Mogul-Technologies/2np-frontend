@@ -201,7 +201,7 @@ export default {
     async getATProfileById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/ATProfile/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/ATProfile/${this.$route.params.id}`
         );
         this.ATProf = response.data.at_profile;
         this.MotorEye = response.data.motor_eye;
@@ -227,7 +227,7 @@ export default {
     async updateATProfile() {
       try {
         await axios.put(
-          `http://localhost:5000/ATProfile/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/ATProfile/${this.$route.params.id}`,
           {
             at_profile: this.ATProf,
             motor_eye: this.MotorEye,

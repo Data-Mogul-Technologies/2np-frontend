@@ -55,7 +55,7 @@ export default {
     async getConsultantById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Consultants/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Consultants/${this.$route.params.id}`
         );
         this.consultants = response.data;
         
@@ -71,7 +71,7 @@ export default {
     async addCustCons() {
       try {
         await axios.post(
-          `http://localhost:5000/CustToConsult`,{
+          `https://api-2np.herokuapp.com/CustToConsult`,{
             customer_id: this.selectedCustomerName,
             sport_consultant_id: this.$route.params.id,
             secondary_consultant: this.selectedConsultantName

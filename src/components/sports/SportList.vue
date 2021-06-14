@@ -57,7 +57,7 @@ export default {
     // Get All Sport
     async getSport() {
       try {
-        const response = await axios.get("http://localhost:5000/Sports");
+        const response = await axios.get("https://api-2np.herokuapp.com/Sports");
         this.sports = response.data;
       } catch (err) {
         console.log(err);
@@ -67,7 +67,7 @@ export default {
     // Delete Sport
     async deleteSport(id) {
       try {
-        await axios.delete(`http://localhost:5000/Sports/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/Sports/${id}`);
         this.getSport();
       } catch (err) {
         console.log(err);

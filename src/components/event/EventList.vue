@@ -121,7 +121,7 @@ export default {
       this.currentEvent = event;
       this.currentIndex = index;
       try {
-        const response = await axios.get(`http://localhost:5000/EventCustomers/${this.currentEvent.event_id}`);
+        const response = await axios.get(`https://api-2np.herokuapp.com/EventCustomers/${this.currentEvent.event_id}`);
         this.allCustomers = response.data;
         console.log(response.data)
       } catch (err) {
@@ -132,7 +132,7 @@ export default {
     //get all customers for single event
     async addCustomerToEvent () {
       try {
-        await axios.post("http://localhost:5000/Registration", 
+        await axios.post("https://api-2np.herokuapp.com/Registration", 
         {
           customer_id: this.selectedCustomerName,
           event_id: this.currentEvent.event_id
@@ -144,7 +144,7 @@ export default {
       }
 
       try {
-        await axios.post("http://localhost:5000/DefaultRegistrationPayment");
+        await axios.post("https://api-2np.herokuapp.com/DefaultRegistrationPayment");
         window.location.reload();
       } catch (err) {
         console.log(err);

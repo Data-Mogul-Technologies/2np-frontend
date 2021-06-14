@@ -117,7 +117,7 @@ export default {
     async getCustomerById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/CustServ/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/CustServ/${this.$route.params.id}`
         );
         this.customers = response.data;
         this.CustomerFName = response.data.first_name;
@@ -136,7 +136,7 @@ export default {
     async addPayment() {
       try {
         await axios.post(
-          `http://localhost:5000/CustPayment`,
+          `https://api-2np.herokuapp.com/CustPayment`,
           {
             
             

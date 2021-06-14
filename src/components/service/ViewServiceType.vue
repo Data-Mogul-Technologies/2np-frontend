@@ -42,7 +42,7 @@ export default {
     async getServiceTypeById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/ServiceType/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/ServiceType/${this.$route.params.id}`
         );
         this.ServiceTypeName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateServiceType() {
       try {
         await axios.put(
-          `http://localhost:5000/ServiceType/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/ServiceType/${this.$route.params.id}`,
           {
             name: this.ServiceTypeName,
             

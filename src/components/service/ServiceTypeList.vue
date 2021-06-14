@@ -56,7 +56,7 @@ export default {
     // Get All ServiceType
     async getServiceType() {
       try {
-        const response = await axios.get("http://localhost:5000/ServiceType");
+        const response = await axios.get("https://api-2np.herokuapp.com/ServiceType");
         this.serviceType = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete ServiceType
     async deleteServiceType(id) {
       try {
-        await axios.delete(`http://localhost:5000/ServiceType/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/ServiceType/${id}`);
         this.getServiceType();
       } catch (err) {
         console.log(err);

@@ -50,7 +50,7 @@ export default {
     // Get All ATProfile
     async getATProfile() {
       try {
-        const response = await axios.get("http://localhost:5000/ATProfileTypes");
+        const response = await axios.get("https://api-2np.herokuapp.com/ATProfileTypes");
         this.ATProfile = response.data;
       } catch (err) {
         console.log(err);

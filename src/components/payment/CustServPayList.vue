@@ -69,7 +69,7 @@ export default {
     // Get All payments
     async getCustPayment() {
       try {
-        const response = await axios.get("http://localhost:5000/CustPayment");
+        const response = await axios.get("https://api-2np.herokuapp.com/CustPayment");
         this.custPayment = response.data;
 
       } catch (err) {
@@ -80,7 +80,7 @@ export default {
     // Delete payment
     async deleteCustPayment(id) {
       try {
-        await axios.delete(`http://localhost:5000/CustPayment/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/CustPayment/${id}`);
         this.getCustPayment();
       } catch (err) {
         console.log(err);

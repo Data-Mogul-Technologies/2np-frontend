@@ -200,7 +200,7 @@ export default {
         async getProfileById() {
         try {
             const response = await axios.get(
-            `http://localhost:5000/Profiles/${this.$route.params.id}`
+            `https://api-2np.herokuapp.com/Profiles/${this.$route.params.id}`
             );
             this.customerFirstName = response.data.first_name;
             this.customerLastName = response.data.last_name;
@@ -225,7 +225,7 @@ export default {
         async updateProfile() {
             try {
                 await axios.put(
-                    `http://localhost:5000/Profiles/${this.$route.params.id}`,
+                    `https://api-2np.herokuapp.com/Profiles/${this.$route.params.id}`,
                     {
                     orientation: this.orientation_details,
                     key_aspects_attacking: this.key_aspects_attacking,

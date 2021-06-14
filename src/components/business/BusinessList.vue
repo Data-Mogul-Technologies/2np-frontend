@@ -56,7 +56,7 @@ export default {
     // Get All Businesses
     async getBusiness() {
       try {
-        const response = await axios.get("http://localhost:5000/Businesses");
+        const response = await axios.get("https://api-2np.herokuapp.com/Businesses");
         this.businesses = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete Businesses
     async deleteBusiness(id) {
       try {
-        await axios.delete(`http://localhost:5000/Business/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/Business/${id}`);
         this.getBusiness();
       } catch (err) {
         console.log(err);

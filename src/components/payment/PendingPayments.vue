@@ -48,7 +48,7 @@ export default {
     // Get Pending Payments
     async getPendingPayment() {
       try {
-        const response = await axios.get("http://localhost:5000/PendingPayment");
+        const response = await axios.get("https://api-2np.herokuapp.com/PendingPayment");
         this.customers = response.data;
       } catch (err) {
         console.log(err);

@@ -42,7 +42,7 @@ export default {
     async getSportById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Sports/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Sports/${this.$route.params.id}`
         );
         this.SportName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateSport() {
       try {
         await axios.put(
-          `http://localhost:5000/Sports/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/Sports/${this.$route.params.id}`,
           {
             name: this.SportName,
             

@@ -185,7 +185,7 @@ export default {
     async getConsultantById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Consultants/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Consultants/${this.$route.params.id}`
         );
         this.consultants = response.data;
         this.ConsultantFName = response.data.first_name;
@@ -211,7 +211,7 @@ export default {
     async updateConsultant() {
       try {
         await axios.put(
-          `http://localhost:5000/Consultants/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/Consultants/${this.$route.params.id}`,
           {
             first_name: this.ConsultantFName,
             last_name: this.ConsultantLName,

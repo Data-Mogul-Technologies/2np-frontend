@@ -72,7 +72,7 @@ import axios from "axios";
     methods: {
       async saveProfile() {
         try {
-          await axios.post("http://localhost:5000/DmdProfiles", {
+          await axios.post("https://api-2np.herokuapp.com/DmdProfiles", {
             customer_id: this.selectedCustomerName,
             dmd_action_type_id: this.selectedDMD,
             status_id: this.selectedProfileStatus,

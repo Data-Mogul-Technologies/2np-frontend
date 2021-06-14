@@ -42,7 +42,7 @@ export default {
     async getPaymentSourceById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/PaymentSource/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/PaymentSource/${this.$route.params.id}`
         );
         this.PaymentSourceName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updatePaymentSource() {
       try {
         await axios.put(
-          `http://localhost:5000/PaymentSource/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/PaymentSource/${this.$route.params.id}`,
           {
             name: this.PaymentSourceName,
             

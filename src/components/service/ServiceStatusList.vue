@@ -56,7 +56,7 @@ export default {
     // Get All ServiceStatus
     async getServiceStatus() {
       try {
-        const response = await axios.get("http://localhost:5000/ServiceStatus");
+        const response = await axios.get("https://api-2np.herokuapp.com/ServiceStatus");
         this.serviceStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete ServiceStatus
     async deleteServiceStatus(id) {
       try {
-        await axios.delete(`http://localhost:5000/ServiceStatus/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/ServiceStatus/${id}`);
         this.getServiceStatus();
       } catch (err) {
         console.log(err);

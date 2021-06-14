@@ -77,7 +77,7 @@ export default {
     // Get All Customers
     async getCustomers() {
       try {
-        const response = await axios.get("http://localhost:5000/Customers");
+        const response = await axios.get("https://api-2np.herokuapp.com/Customers");
         this.customers = response.data;
       } catch (err) {
         console.log(err);
@@ -87,7 +87,7 @@ export default {
     // Delete Customer
     async deleteCustomer(id) {
       try {
-        await axios.delete(`http://localhost:5000/Customers/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/Customers/${id}`);
         this.getCustomers();
       } catch (err) {
         console.log(err);

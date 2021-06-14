@@ -84,7 +84,7 @@ export default {
         //Get all profiles 
         async getProfiles() {
             try {
-                const response = await axios.get("http://localhost:5000/DmdProfiles");
+                const response = await axios.get("https://api-2np.herokuapp.com/DmdProfiles");
                 this.profiles = response.data;
                 // this.rows = this.profiles.length
                 // const val = response.json;

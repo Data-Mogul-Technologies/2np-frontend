@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('http://localhost:5000/Businesses').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/Businesses').then(response =>{
           this.BusinessTypes = response.data;
       }).catch(e =>{
 

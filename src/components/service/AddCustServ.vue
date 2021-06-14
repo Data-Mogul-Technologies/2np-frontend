@@ -103,7 +103,7 @@ export default {
     async getCustomerById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/CustServ/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/CustServ/${this.$route.params.id}`
         );
         this.CustomerFName = response.data.first_name;
         this.CustomerLName = response.data.last_name;
@@ -117,7 +117,7 @@ export default {
     // Create New ServiceStatus
     async saveCustServ() {
       try { 
-        await axios.post("http://localhost:5000/CustPayment", {
+        await axios.post("https://api-2np.herokuapp.com/CustPayment", {
             customer_service_type_id:this.$route.params.id,
             payment_status_id: this.selectedPaymentStatus,
             payment_source_id: this.selectedPaymentSource,

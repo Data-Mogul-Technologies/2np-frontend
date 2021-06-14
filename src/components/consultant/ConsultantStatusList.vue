@@ -56,7 +56,7 @@ export default {
     // Get All ConsultantStatus
     async getConsultantStatus() {
       try {
-        const response = await axios.get("http://localhost:5000/ConsultantStatus");
+        const response = await axios.get("https://api-2np.herokuapp.com/ConsultantStatus");
         this.consultantStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete ConsultantStatus
     async deleteConsultantStatus(id) {
       try {
-        await axios.delete(`http://localhost:5000/ConsultantStatus/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/ConsultantStatus/${id}`);
         this.getConsultantStatus();
       } catch (err) {
         console.log(err);

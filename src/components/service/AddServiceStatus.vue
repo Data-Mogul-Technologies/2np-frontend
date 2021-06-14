@@ -41,7 +41,7 @@ export default {
     // Create New ServiceStatus
     async saveServiceStatus() {
       try { 
-        await axios.post("http://localhost:5000/ServiceStatus", {
+        await axios.post("https://api-2np.herokuapp.com/ServiceStatus", {
             name: this.ServiceStatusName
         });
         this.ServiceStatusName = "";

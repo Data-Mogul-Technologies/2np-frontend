@@ -116,7 +116,7 @@ export default {
     async getConsultantById() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/Consultants/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Consultants/${this.$route.params.id}`
         );
         this.consultants = response.data;
       } catch (err) {
@@ -127,7 +127,7 @@ export default {
     //get all events for consultant from sport_consultant_event table
     async getConsultantEvents() {
       try {
-        const response = await axios.get (`http://localhost:5000/EventsForConsultant/${this.$route.params.id}`);
+        const response = await axios.get (`https://api-2np.herokuapp.com/EventsForConsultant/${this.$route.params.id}`);
         this.events = response.data;
         console.log(response.data)
       } catch (err) {
@@ -138,7 +138,7 @@ export default {
     //register consultant to event 
     async addConsultantToEvent() {
       try {
-        await axios.post("http://localhost:5000/EventsForConsultant", {
+        await axios.post("https://api-2np.herokuapp.com/EventsForConsultant", {
             sport_consultant_id: this.$route.params.id,
             event_id: this.selectedEvent
         });
