@@ -2,7 +2,7 @@
     <header>
     <div class=img2NP>
       <router-link to="/">  
-      <img src ="@/assets/logo.png" />
+      <img src ="public/logo.png" />
       </router-link>
     </div>
     </header>

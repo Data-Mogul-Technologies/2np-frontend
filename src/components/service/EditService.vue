@@ -59,7 +59,7 @@ export default {
     async getEventById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/CustServ/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/api/CustServ/${this.$route.params.id}`
         );
         this.services = response.data;
         this.EventFName = response.data.first_name;
@@ -77,7 +77,7 @@ export default {
     async updateEvent() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/CustServ/${this.$route.params.id}`,{
+          `https://api-2np.herokuapp.com/api/CustServ/${this.$route.params.id}`,{
             service_status_id: this.selectedServiceStatus,
             service_type_id: this.selectedServiceType
             });

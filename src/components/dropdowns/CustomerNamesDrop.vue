@@ -30,7 +30,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/Customers').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/api/Customers').then(response =>{
           this.CustomerNames = response.data;
           console.log(response.data);
       }).catch(e =>{

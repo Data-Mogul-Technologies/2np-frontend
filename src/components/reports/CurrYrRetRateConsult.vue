@@ -47,7 +47,7 @@ export default {
     // Get All Customers
     async getCustomers() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/CurrYrRetRateConsult");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/CurrYrRetRateConsult");
         this.customers = response.data;
       } catch (err) {
         console.log(err);

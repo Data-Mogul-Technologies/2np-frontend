@@ -42,7 +42,7 @@ export default {
     async getBusinessById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/Businesses/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/api/Businesses/${this.$route.params.id}`
         );
         this.BusinessName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateBusiness() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/Businesses/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/api/Businesses/${this.$route.params.id}`,
           {
             name: this.BusinessName,
             

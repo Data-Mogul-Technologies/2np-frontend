@@ -56,7 +56,7 @@ export default {
     // Get All ProfileStatus
     async getProfileStatus() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/ProfileStatus");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/ProfileStatus");
         this.profileStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete ProfileStatus
     async deleteProfileStatus(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/ProfileStatus/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/api/ProfileStatus/${id}`);
         this.getProfileStatus();
       } catch (err) {
         console.log(err);

@@ -255,7 +255,7 @@ export default {
     // Create New Customer
     async saveCustomer() {
       try {
-        await axios.post("https://api-2np.herokuapp.com/Customers", {
+        await axios.post("https://api-2np.herokuapp.com/api/Customers", {
             first_name: this.CustomerFName,
             last_name: this.CustomerLName,
             customer_status_id:this.selectedCustomerStatus,

@@ -42,7 +42,7 @@ export default {
     async getCustomerTypeById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/CustomerTypes/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/api/CustomerTypes/${this.$route.params.id}`
         );
         this.CustomerTypeName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateCustomerType() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/CustomerTypes/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/api/CustomerTypes/${this.$route.params.id}`,
           {
             name: this.CustomerTypeName,
             

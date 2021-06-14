@@ -41,7 +41,7 @@ export default {
     // Create New Sport
     async saveSport() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/Sports", {
+        await axios.post("https://api-2np.herokuapp.com/api/Sports", {
             name: this.SportName
         });
         this.SportName = "";

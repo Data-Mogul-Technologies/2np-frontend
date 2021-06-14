@@ -40,7 +40,7 @@ export default {
     // Create New CustomerType
     async saveCustomerType() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/CustomerTypes", {
+        await axios.post("https://api-2np.herokuapp.com/api/CustomerTypes", {
             name: this.CustomerTypeName
         });
         this.CustomerTypeName = "";
