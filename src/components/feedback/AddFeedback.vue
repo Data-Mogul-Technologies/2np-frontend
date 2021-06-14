@@ -138,7 +138,7 @@ export default {
     async getFeedbackById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/Customers/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/api/Customers/${this.$route.params.id}`
         );
         this.customers = response.data
         
@@ -152,7 +152,7 @@ export default {
     // Create New Feedback
     async saveFeedback() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/Feedback", {
+        await axios.post("https://api-2np.herokuapp.com/api/Feedback", {
             customer_id: this.$route.params.id,
             date: this.FeedbackDate,
             how_hear: this.FeedbackHear,

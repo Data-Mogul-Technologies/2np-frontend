@@ -41,7 +41,7 @@ export default {
     // Create New EventType
     async saveEventType() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/EventType", {
+        await axios.post("https://api-2np.herokuapp.com/api/EventType", {
             name: this.EventTypeName
         });
         this.EventTypeName = "";

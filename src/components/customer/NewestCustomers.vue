@@ -56,7 +56,7 @@ export default {
     // Get All Customers
     async getCustomers() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/CustomerByDate");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/CustomerByDate");
         this.customers = response.data;
       } catch (err) {
         console.log(err);
@@ -68,7 +68,7 @@ export default {
     // Delete Customer
     async deleteCustomer(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/Customers/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/api/Customers/${id}`);
         this.getCustomers();
       } catch (err) {
         console.log(err);

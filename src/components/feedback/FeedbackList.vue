@@ -66,7 +66,7 @@ export default {
     // Get All Feedback
     async getFeedback() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/Feedback");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/Feedback");
         this.feedbacks = response.data;
       } catch (err) {
         console.log(err);

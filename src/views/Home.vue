@@ -259,7 +259,7 @@ export default {
   methods: {
      async getEvents() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/TotalEvents");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/TotalEvents");
         this.events = response.data;
       } catch (err) {
         console.log(err);
@@ -268,7 +268,7 @@ export default {
 
       async getPayments() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/TotalPendingPayments");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/TotalPendingPayments");
         this.payments = response.data;
       } catch (err) {
         console.log(err);
@@ -277,7 +277,7 @@ export default {
 
       async getCustomers() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/threeCustomers");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/threeCustomers");
         this.customers = response.data;
       } catch (err) {
         console.log(err);
@@ -286,7 +286,7 @@ export default {
 
       async getProfiles() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/TotalPendingProfiles");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/TotalPendingProfiles");
         this.profiles = response.data;
       } catch (err) {
         console.log(err);
@@ -295,7 +295,7 @@ export default {
 
       async getRetRate() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/RetRateCompany");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/RetRateCompany");
         this.retrates = response.data;
       } catch (err) {
         console.log(err);
@@ -304,7 +304,7 @@ export default {
 
       async getFeedback() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/SomeFeedback");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/SomeFeedback");
         this.feedbacks = response.data;
       } catch (err) {
         console.log(err);
@@ -313,7 +313,7 @@ export default {
 
     async getAnualPymt() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/AnnualPaymentCust");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/AnnualPaymentCust");
         this.pymts = response.data;
       } catch (err) {
         console.log(err);

@@ -33,7 +33,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/ConsultantStatus').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/api/ConsultantStatus').then(response =>{
           this.ConsultantStatusTypes = response.data;
           console.log(response.data);
       }).catch(e =>{

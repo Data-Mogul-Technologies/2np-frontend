@@ -52,7 +52,7 @@ export default {
     // Get All DmdProfile
     async getDmdProfile() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/dmdProfileTypes");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/dmdProfileTypes");
         this.DmdProfile = response.data;
       } catch (err) {
         console.log(err);
@@ -62,7 +62,7 @@ export default {
     // Delete DmdProfile
     async deleteDmdProfile(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/DmdProfile/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/api/DmdProfile/${id}`);
         this.getDmdProfile();
       } catch (err) {
         console.log(err);

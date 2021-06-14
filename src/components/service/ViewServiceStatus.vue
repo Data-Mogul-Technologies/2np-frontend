@@ -42,7 +42,7 @@ export default {
     async getServiceStatusById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/ServiceStatus/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/api/ServiceStatus/${this.$route.params.id}`
         );
         this.ServiceStatusName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateServiceStatus() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/ServiceStatus/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/api/ServiceStatus/${this.$route.params.id}`,
           {
             name: this.ServiceStatusName,
             

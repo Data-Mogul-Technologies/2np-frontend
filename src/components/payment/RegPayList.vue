@@ -72,7 +72,7 @@ export default {
     // Get All payments
     async getRegPayment() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/RegistrationPayment");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/RegistrationPayment");
         this.regPayment = response.data;
 
       } catch (err) {
@@ -83,7 +83,7 @@ export default {
     // Delete payment
     async deleteRegPayment(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/RegistrationPayment/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/api/RegistrationPayment/${id}`);
         this.getRegPayment();
       } catch (err) {
         console.log(err);

@@ -56,7 +56,7 @@ export default {
     // Get All EventStatus
     async getEventStatus() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/EventStatus");
+        const response = await axios.get("https://api-2np.herokuapp.com/api/EventStatus");
         this.eventStatus = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete EventStatus
     async deleteEventStatus(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/EventStatus/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/api/EventStatus/${id}`);
         this.getEventStatus();
       } catch (err) {
         console.log(err);

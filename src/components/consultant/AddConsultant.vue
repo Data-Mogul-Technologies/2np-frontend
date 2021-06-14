@@ -180,7 +180,7 @@ export default {
     // Create New Customer
     async saveConsultant() {
       try {
-        await axios.post("https://api-2np.herokuapp.com/Consultants", {
+        await axios.post("https://api-2np.herokuapp.com/api/Consultants", {
             sport_consultant_status_id: this.selectedConsultantStatus,
             first_name: this.ConsultantFName,
             last_name: this.ConsultantLName,

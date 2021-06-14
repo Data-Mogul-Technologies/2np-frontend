@@ -33,7 +33,7 @@ export default {
   },
 
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/dmdProfileTypes').then(response => {
+      axios.get('https://api-2np.herokuapp.com/api/dmdProfileTypes').then(response => {
           this.dmdTypes = response.data;
       }).catch(e =>{
       })

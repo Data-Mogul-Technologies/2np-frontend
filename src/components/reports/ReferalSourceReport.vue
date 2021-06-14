@@ -53,7 +53,7 @@ export default {
       //get all dmd profiles
       async getReport() {
             try {
-              const response = await axios.get("https://api-2np.herokuapp.com/CountHowHear");
+              const response = await axios.get("https://api-2np.herokuapp.com/api/CountHowHear");
               this.report = response.data;
               console.log(response.data)
             } catch (err) {

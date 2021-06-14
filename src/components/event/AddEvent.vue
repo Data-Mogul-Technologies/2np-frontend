@@ -122,7 +122,7 @@ export default {
     // Create New Event
     async saveEvent() {
       try {
-        await axios.post("https://api-2np.herokuapp.com/Events", {
+        await axios.post("https://api-2np.herokuapp.com/api/Events", {
             name: this.EventName,
             date: this.EventDate,
             address: this.EventAddress,

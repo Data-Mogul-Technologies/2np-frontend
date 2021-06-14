@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/StatusTypes').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/api/StatusTypes').then(response =>{
           this.CustomerStatusTypes = response.data;
           console.log(response.data);
       }).catch(e =>{
