@@ -30,7 +30,7 @@ export default {
       this.$emit('changeState', this.selectedState)
     }},
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/State').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/State').then(response =>{
           this.StateLists = response.data;
       }).catch(e =>{
 

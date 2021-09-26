@@ -32,7 +32,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/PaymentSource').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/PaymentSource').then(response =>{
           this.PaymentSource = response.data;
           console.log(response.data);
       }).catch(e =>{

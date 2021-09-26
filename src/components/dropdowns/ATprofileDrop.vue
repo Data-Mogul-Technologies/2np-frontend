@@ -33,7 +33,7 @@ export default {
   },
 
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/ATProfileTypes').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/ATProfileTypes').then(response =>{
           this.actionTypes = response.data;
       }).catch(e =>{
       })

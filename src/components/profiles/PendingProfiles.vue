@@ -57,7 +57,7 @@ export default {
     // Get Pending Profiles
     async getPendingProfiles() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/api/PendingProfiles");
+        const response = await axios.get("https://api-2np.herokuapp.com/PendingProfiles");
         this.customers = response.data;
       } catch (err) {
         console.log(err);

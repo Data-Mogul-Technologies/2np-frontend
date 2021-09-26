@@ -33,7 +33,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/ServiceStatus').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/ServiceStatus').then(response =>{
           this.ServiceStatus = response.data;
           console.log(response.data);
       }).catch(e =>{

@@ -65,7 +65,7 @@ export default {
     async getCustomerById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/api/Customers/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Customers/${this.$route.params.id}`
         );
         this.CustomerFName = response.data.first_name;
         this.CustomerLName = response.data.last_name;
@@ -78,7 +78,7 @@ export default {
     // Create New ServiceStatus
     async saveCustServ() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/api/CustServ", {
+        await axios.post("https://api-2np.herokuapp.com/CustServ", {
             customer_id: this.$route.params.id,
             service_status_id: this.selectedServiceStatus,
             service_type_id: this.selectedServiceType

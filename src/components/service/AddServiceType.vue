@@ -41,7 +41,7 @@ export default {
     // Create New ServiceType
     async saveServiceType() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/api/ServiceType", {
+        await axios.post("https://api-2np.herokuapp.com/ServiceType", {
             name: this.ServiceTypeName
         });
         this.ServiceTypeName = "";

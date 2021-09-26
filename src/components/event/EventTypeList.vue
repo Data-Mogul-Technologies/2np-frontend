@@ -56,7 +56,7 @@ export default {
     // Get All EventType
     async getEventType() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/api/EventType");
+        const response = await axios.get("https://api-2np.herokuapp.com/EventType");
         this.eventType = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete EventType
     async deleteEventType(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/api/EventType/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/EventType/${id}`);
         this.getEventType();
       } catch (err) {
         console.log(err);

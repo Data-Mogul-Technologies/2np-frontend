@@ -31,7 +31,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/Businesses').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/Businesses').then(response =>{
           this.BusinessTypes = response.data;
       }).catch(e =>{
 

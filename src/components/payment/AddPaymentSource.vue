@@ -41,7 +41,7 @@ export default {
     // Create New PaymentSource
     async savePaymentSource() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/api/PaymentSource", {
+        await axios.post("https://api-2np.herokuapp.com/PaymentSource", {
             name: this.PaymentSourceName
         });
         this.PaymentSourceName = "";
