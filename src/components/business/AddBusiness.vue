@@ -47,7 +47,7 @@ export default {
     // Create New Business
     async saveBusiness() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/api/Businesses", {
+        await axios.post("https://api-2np.herokuapp.com/Businesses", {
             name: this.BusinessName
         });
         this.BusinessName = "";

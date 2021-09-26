@@ -122,7 +122,7 @@ export default {
     async getCustomerById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/api/CustPayment/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/CustPayment/${this.$route.params.id}`
         );
         this.customers=response.data;
         this.CustomerFName = response.data.first_name;
@@ -143,7 +143,7 @@ export default {
     async updateCustomer() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/api/CustPayment/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/CustPayment/${this.$route.params.id}`,
           {
             
             date: this.DateMade,

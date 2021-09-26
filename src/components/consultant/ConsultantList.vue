@@ -77,7 +77,7 @@ export default {
     // Get All Consultants
     async getConsultants() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/api/Consultants");
+        const response = await axios.get("https://api-2np.herokuapp.com/Consultants");
         this.consultants = response.data;
       } catch (err) {
         console.log(err);

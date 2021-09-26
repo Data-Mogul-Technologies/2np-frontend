@@ -176,7 +176,7 @@ import axios from "axios";
     methods: {
       async saveProfile() {
         try {
-          await axios.post("https://api-2np.herokuapp.com/api/Profiles", {
+          await axios.post("https://api-2np.herokuapp.com/Profiles", {
             customer_id: this.selectedCustomerName,
             action_type_id: this.selectedAT,
             status_at_dmd_id: this.selectedProfileStatus,

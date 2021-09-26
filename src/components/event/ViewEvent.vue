@@ -120,7 +120,7 @@ export default {
     async getEventById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/api/Events/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/Events/${this.$route.params.id}`
         );
         this.events = response.data;
         this.EventName = response.data.name;
@@ -139,7 +139,7 @@ export default {
     async updateEvent() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/api/Events/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/Events/${this.$route.params.id}`,
           {
             name: this.EventName,
             date: this.EventDate,

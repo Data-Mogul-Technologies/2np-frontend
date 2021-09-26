@@ -42,7 +42,7 @@ export default {
     async getConsultantStatusById() {
       try {
         const response = await axios.get(
-          `https://api-2np.herokuapp.com/api/ConsultantStatus/${this.$route.params.id}`
+          `https://api-2np.herokuapp.com/ConsultantStatus/${this.$route.params.id}`
         );
         this.ConsultantStatusName = response.data.name;
        
@@ -56,7 +56,7 @@ export default {
     async updateConsultantStatus() {
       try {
         await axios.put(
-          `https://api-2np.herokuapp.com/api/ConsultantStatus/${this.$route.params.id}`,
+          `https://api-2np.herokuapp.com/ConsultantStatus/${this.$route.params.id}`,
           {
             name: this.ConsultantStatusName,
             

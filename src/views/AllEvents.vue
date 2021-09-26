@@ -81,7 +81,7 @@ export default {
         // Get All Events
         async getEvents() {
         try {
-            const response = await axios.get("https://api-2np.herokuapp.com/api/Events");
+            const response = await axios.get("https://api-2np.herokuapp.com/Events");
             this.events = response.data;
             console.log(response.data)
         } catch (err) {

@@ -56,7 +56,7 @@ export default {
     // Get All CustomerType
     async getCustomerType() {
       try {
-        const response = await axios.get("https://api-2np.herokuapp.com/api/CustomerTypes");
+        const response = await axios.get("https://api-2np.herokuapp.com/CustomerTypes");
         this.customerType = response.data;
       } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ export default {
     // Delete CustomerType
     async deleteCustomerType(id) {
       try {
-        await axios.delete(`https://api-2np.herokuapp.com/api/CustomerTypes/${id}`);
+        await axios.delete(`https://api-2np.herokuapp.com/CustomerTypes/${id}`);
         this.getCustomerType();
       } catch (err) {
         console.log(err);

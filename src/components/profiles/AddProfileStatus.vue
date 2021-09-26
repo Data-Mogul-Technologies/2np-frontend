@@ -41,7 +41,7 @@ export default {
     // Create New ProfileStatus
     async saveProfileStatus() {
       try { 
-        await axios.post("https://api-2np.herokuapp.com/api/ProfileStatus", {
+        await axios.post("https://api-2np.herokuapp.com/ProfileStatus", {
             name: this.ProfileStatusName
         });
         this.ProfileStatusName = "";

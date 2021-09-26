@@ -32,7 +32,7 @@ export default {
 
   },
   mounted(){
-      axios.get('https://api-2np.herokuapp.com/api/EventType').then(response =>{
+      axios.get('https://api-2np.herokuapp.com/EventType').then(response =>{
           this.EventType = response.data;
           console.log(response.data);
       }).catch(e =>{
